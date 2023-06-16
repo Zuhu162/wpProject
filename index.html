@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Leave Application Web App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fab fa-font-awesome"></i> Leave Application Web App</h1>
+      <p>
+        Welcome to our leave application web app. Please fill out the form below
+        to apply for leave.
+      </p>
+
+      <form>
+        <div class="form-group">
+          <label for="name"><i class="far fa-user"></i> Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label for="leave-type"
+            ><i class="fas fa-calendar-alt"></i> Leave Type:</label
+          >
+          <select id="leave-type" name="leave-type">
+            <option value="vacation">Vacation</option>
+            <option value="sick">Sick leave</option>
+            <option value="personal">Personal leave</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="start-date"
+            ><i class="far fa-calendar"></i> Start Date:</label
+          >
+          <input type="date" id="start-date" name="start-date" />
+        </div>
+        <div class="form-group">
+          <label for="end-date"
+            ><i class="far fa-calendar"></i> End Date:</label
+          >
+          <input type="date" id="end-date" name="end-date" />
+        </div>
+        <div class="form-group">
+          <label for="reason"><i class="far fa-comment"></i> Reason:</label>
+          <textarea
+            id="reason"
+            name="reason"
+            placeholder="Reason for leave"
+          ></textarea>
+        </div>
+        <button type="submit"><i class="far fa-paper-plane"></i> Submit</button>
+      </form>
+    </div>
+
+    <!-- Font Awesome Script -->
+    <script
+      src="https://kit.fontawesome.com/your-font-awesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

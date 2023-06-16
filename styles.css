@@ -1,0 +1,84 @@
+/* Font Awesome Theme */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+/* Custom Styles */
+body {
+  font-family: "Font Awesome 5 Free", Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  background-image: url("background-image.jpg"); /* Replace with your background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  color: #555;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.fa {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.fa-lg {
+  font-size: 24px;
+}
+
+.fa-2x {
+  font-size: 32px;
+}
+
+.fa-3x {
+  font-size: 48px;
+}
+
+.fa-4x {
+  font-size: 64px;
+}
+
+.fa-5x {
+  font-size: 80px;
+}
+
+/* Button Styles */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #23527c;
+}
+
+button i {
+  margin-right: 5px;
+}
