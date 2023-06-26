@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Leave Application Approval/Rejection</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <i class="fab fa-font-awesome"></i> Leave Application Approval/Rejection
+      </h1>
+      <p>
+        Please review the leave application and select the appropriate action:
+      </p>
+
+      <div class="leave-application">
+        <h2>Leave Application Details</h2>
+        <?php
+      // PHP code to retrieve the leave application details dynamically
+      $applicantName = "John Doe";
+      $leaveType = "Vacation";
+      $startDate = "2023-06-20";
+      $endDate = "2023-06-24";
+      $reason = "Family vacation";
+      ?>
+
+        <div class="form-group">
+          <label for="name"><i class="far fa-user"></i> Applicant Name:</label>
+          <span><?php echo $applicantName; ?></span>
+        </div>
+        <div class="form-group">
+          <label for="leave-type"
+            ><i class="fas fa-calendar-alt"></i> Leave Type:</label
+          >
+          <span><?php echo $leaveType; ?></span>
+        </div>
+        <div class="form-group">
+          <label for="start-date"
+            ><i class="far fa-calendar"></i> Start Date:</label
+          >
+          <span><?php echo $startDate; ?></span>
+        </div>
+        <div class="form-group">
+          <label for="end-date"
+            ><i class="far fa-calendar"></i> End Date:</label
+          >
+          <span><?php echo $endDate; ?></span>
+        </div>
+        <div class="form-group">
+          <label for="reason"><i class="far fa-comment"></i> Reason:</label>
+          <span><?php echo $reason; ?></span>
+        </div>
+      </div>
+
+      <h2>Select Action</h2>
+      <div class="action-buttons">
+        <form method="POST" action="process-leave.php">
+          <input
+            type="hidden"
+            name="applicantName"
+            value="<?php echo $applicantName; ?>"
+          />
+          <input
+            type="hidden"
+            name="leaveType"
+            value="<?php echo $leaveType; ?>"
+          />
+          <input
+            type="hidden"
+            name="startDate"
+            value="<?php echo $startDate; ?>"
+          />
+          <input type="hidden" name="endDate" value="<?php echo $endDate; ?>" />
+          <input type="hidden" name="reason" value="<?php echo $reason; ?>" />
+
+          <button
+            class="approve-button"
+            type="submit"
+            name="action"
+            value="approve"
+          >
+            <i class="far fa-thumbs-up"></i> Approve
+          </button>
+          <button
+            class="reject-button"
+            type="submit"
+            name="action"
+            value="reject"
+          >
+            <i class="far fa-thumbs-down"></i> Reject
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Font Awesome Script -->
+    <script
+      src="https://kit.fontawesome.com/your-font-awesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
